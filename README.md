@@ -53,7 +53,7 @@ The ADG728 did not have a library for use on the pi, so I made a quick one that 
 	This command allows you to slip the state of the given S# 	pin. (S1 = 0, S2 = 1, etc...)
 2. `set_bits(states:int)`
 	This sets the state of all the switches using an 8 bit 	integer. (Ex: 15 = '00001111' will connect S1,S2,S3 and 	S4.)
-3. 'reset()'
+3. `reset()`
 	This sets all the bits to 0. All the switches are opened.
 
 ###MAKE SURE YOU ONLY HAVE ONE SWITCH ENABLED AT A TIME WHEN USING THIS CHIP TO SELECT BETWEEN CS PINS TO AVOID CROSSTALK!!! (unless that is what you want for your application)
@@ -66,10 +66,10 @@ However, while testing, I found that my SPI bus was a bit unstable with jumper c
 ##Docker Container
 Another though part of this project was figuring out the right configuration for the docker container. 
 You don't have to use the Dockerfile provided here, but make sure yours includes the following dependencies for this to work:
-1. RPI.GPIO
-2. spidev
-3. smbus
-4. i2c-tools (I have found you can't install i2c-tools with apt-get unless you run apt-get update beforehand)
+1. `RPI.GPIO`
+2. `spidev`
+3. `smbus` 
+4. `i2c-tools` (I have found you can't install i2c-tools with apt-get unless you run apt-get update beforehand)
 
 ###MAKE SURE YOU COPY THE CUSTOM LIBRARIES BEFORE TRYING TO INSTALL THEM WITH pip install -e!!!
 
