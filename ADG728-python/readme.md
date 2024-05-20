@@ -1,0 +1,1 @@
+A python library for the ADG728 analog switch to use on a raspberry pi. However, making libraries is hard.
